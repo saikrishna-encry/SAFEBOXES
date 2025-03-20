@@ -1,0 +1,100 @@
+// Variables for colors and spacing
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$background-color: #f4f4f4;
+$text-color: #333;
+$border-radius: 5px;
+$padding: 10px;
+$margin: 10px;
+
+// Container styling
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: $padding * 2;
+  background-color: white;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+
+  h2 {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: $margin * 2;
+  }
+
+  label {
+    display: block;
+    margin: $margin 0 $margin / 2;
+    color: $text-color;
+    font-weight: bold;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: $padding;
+    margin-bottom: $margin;
+    border: 1px solid #ccc;
+    border-radius: $border-radius;
+    font-size: 16px;
+    box-sizing: border-box;
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+      box-shadow: 0 0 5px rgba($primary-color, 0.5);
+    }
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    padding: $padding;
+    margin: $margin 0;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: $border-radius;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+
+    &:active {
+      background-color: darken($primary-color, 20%);
+    }
+  }
+
+  pre {
+    background-color: $background-color;
+    padding: $padding;
+    border-radius: $border-radius;
+    border: 1px solid #ccc;
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: $text-color;
+  }
+
+  // Specific styles for the encrypted and decrypted text inputs
+  input[readonly] {
+    background-color: $background-color;
+    cursor: not-allowed;
+  }
+
+  // Decrypt button specific style
+  button + button {
+    background-color: $secondary-color;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+
+    &:active {
+      background-color: darken($secondary-color, 20%);
+    }
+  }
+}

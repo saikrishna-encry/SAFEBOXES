@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>SafeBoxs Encryption</h2>
+
+  <label>Enter text to encrypt:</label>
+  <input type="text" [value]="textToEncrypt" (input)="updateTextToEncrypt($event)" placeholder="Enter text" />
+  <button (click)="encrypt()">Encrypt</button>
+
+  <label>Encrypted text:</label>
+  <input type="text" [value]="encryptedText" readonly />
+
+  <label>Enter text to decrypt:</label>
+  <input type="text" [value]="textToDecrypt" (input)="updateTextToDecrypt($event)" placeholder="Enter text" />
+  <button (click)="decrypt()">Decrypt</button>
+
+  <label>Decrypted text:</label>
+  <pre>{{ decryptedText }}</pre>
+</div>
